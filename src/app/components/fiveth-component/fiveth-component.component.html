@@ -1,0 +1,10 @@
+<div class="aula">
+    <h2>NgFor! Renderizar Listas</h2>
+    <p>*ngFor="let item of animals" para renderizar cada elemento.</p>
+    <ul>
+        <li *ngFor="let item of animals" [ngStyle]="{'border':'1px solid blue', 'width':'150px'}">
+            <p>nome: {{item.name}}</p>
+            <p>tipo: {{item.type}}</p>
+        </li>
+    </ul>
+</div>

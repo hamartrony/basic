@@ -1,0 +1,24 @@
+<div class="aula">
+    <h2>Aula 3 - Diretivas Ng </h2>
+    <p>Utilizadas para trazer funções automatizadas ao sistema.</p>
+    <p>Comecam com ng + nome da diretiva.</p>
+    <p>[ngClass] = insere classe no componente dinamicamente.</p>
+    <div [ngClass]="classes">
+
+        <p [ngStyle]="{'font-size':size + 'px'}">[ngStyle] = altera css do compoente.</p>
+        <p >[ngStyle]="&#123;"font-size":size + "px"&#125;"</p>
+    </div>
+
+    <div [ngClass]="classes">
+        <p>*ngIf = formatação condicional; else outraCoisa</p>
+        <button (click)="changeShow()">Change Show</button>
+        <p *ngIf="show ; else outroElemento" >Sera mostrado se a Variavel SHOW for TRUE.</p>
+        <p>ng-template #outroElemento renderiza o que estiver em else</p>
+        <ng-template #outroElemento>
+            <p>SHOW agora e FALSE</p>
+        </ng-template>
+
+    </div>
+
+
+</div>

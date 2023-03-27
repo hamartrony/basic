@@ -1,0 +1,7 @@
+<div class="aula">
+
+    <h2>Child-component works!</h2>
+    <h4 [ngStyle]="{'color': 'green', 'font-size':'20px' }">Componente filho recebendo: {{data || aula4}}</h4>
+    <p *ngIf="!aula4">No filho, os dados sao recebidos atraves de @Input()</p>
+    <p *ngIf="aula4">No Filho os dados sao emitidos atraves de @Output <br><button (click)="handleClick()">Alterar Numero</button></p>
+</div>
