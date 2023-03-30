@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Animal } from 'src/app/Animal';
+import { Mesa } from 'src/app/Mesa';
+import { FivethCompService } from 'src/app/services/fiveth-comp.service';
 
 @Component({
   selector: 'app-fiveth-component',
@@ -7,12 +8,21 @@ import { Animal } from 'src/app/Animal';
   styleUrls: ['./fiveth-component.component.sass']
 })
 export class FivethComponentComponent {
-  animals: Animal[] = [
-    {name: 'nina', type:'dog', age: 10},
-    {name: 'luna', type:'snak', age: 5},
-    {name: 'chico', type:'cow', age: 1},
-    {name: 'tiao', type:'cat', age: 3},
-    
-  ]
+  animals: Mesa[] = []
+
+  constructor(private fivethService: FivethCompService){
+    this.getMesas();
+
+  }
+
+  removeMesa(mesa: Mesa){
+    this.animals = this.fivethService.removeMesa(mesa, this.animals)
+  }
+
+  getMesas():void{
+    this.fivethService.getAll().subscribe((mesas) => this.animals = mesas);
+  }
+
+
 
 }

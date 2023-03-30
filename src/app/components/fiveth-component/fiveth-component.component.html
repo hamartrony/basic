@@ -3,8 +3,9 @@
     <p>*ngFor="let item of animals" para renderizar cada elemento.</p>
     <ul>
         <li *ngFor="let item of animals" [ngStyle]="{'border':'1px solid blue', 'width':'150px'}">
-            <p>nome: {{item.name}}</p>
-            <p>tipo: {{item.type}}</p>
+            <a routerLink={{item.id}}>id: {{item.id}}</a>
+            <p>update: {{item.update}}</p>
+            <button (click)="removeMesa(item)">Remover</button>
         </li>
     </ul>
 </div>

@@ -1,0 +1,16 @@
+<div class="aula">
+
+    <h2>Two way data Binding</h2>
+    <p>Ao criar formulario, uma variável e criada com nome do dado e renderizada onde for inserida</p>
+    <form>
+        <input
+            type="text"
+            [(ngModel)]='name'
+            name="name"
+            placeholder="Digite o nome."
+        />
+        <input type="submit" value="Enviar"/>
+    </form>
+    <p>O nome armazenado na variavel: {{name}}</p>
+
+</div>
